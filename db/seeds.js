@@ -1,5 +1,5 @@
-const db = require('monk')('localhost/posts-workshop')
-const Post = db.get('posts')
+var db = require('monk')('localhost/posts-workshop')
+var Post = db.get('posts')
 
 Post.remove({})
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="posts-workshop">
   <head>
     <meta charset="utf-8">
     <title>Posts Workshop</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body>
+  <body ng-controller="PostsController">
     <div>
       <nav class="navbar navbar-default">
         <div class="container">
@@ -19,7 +19,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Poster</a>
+            <a class="navbar-brand" href="/">Post</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,8 +39,8 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-      <div ng-show="showingForm" class="container">
-        <form ng-submit="addPost()">
+      <div class="container">
+        <form>
           <p>
             <input ng-model="newPost.title" placeholder="title" class="form-control">
           </p>
@@ -55,9 +55,12 @@
     </div>
 
     <div class="container">
+      {{ hello }}
       {{ 1 + 2 }}
+      <div ng-view></div>
     </div>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
