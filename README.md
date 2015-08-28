@@ -2,7 +2,7 @@
 
 ### Set Up
 1. New up an Express App named `posts-workshop`
-1. Install Angular and Bootstrap using Bower
+1. Install Angular and Bootstrap using Bower (if you don't have bower installed, just grab links from a CDN)
   - `bower install angular`
   - `bower install bootstrap`
   - `touch .gitignore` and add `bower_components`
@@ -48,7 +48,7 @@
 ### Seeding the Database
 
 1. In your root directory `mkdir db` `touch db/seeds.js`
-1. Tie it up to mongo / monk
+1. Tie `seeds.js` up to mongo / monk
   - declare a variable `db` that connects to `posts-workshop` (just use localhost for now)
     - `var db = require('monk')('localhost/posts-workshop')`
   - declare a variable `Post` that connects to `posts`
