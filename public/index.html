@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Posts Workshop</title>
-    <script type="text/javascript" src="/app.js"> </script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
   </head>
@@ -26,7 +25,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active">
-                <a href ng-click="showPost()">Add Post</a>
+                <a href ng-click="showForm()">Add Post</a>
               </li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
@@ -40,12 +39,18 @@
       </nav>
 
       <div class="container">
-        <form>
+        <form ng-show="show">
           <p>
             <input ng-model="newPost.title" placeholder="title" class="form-control">
           </p>
           <p>
             <input ng-model="newPost.author" placeholder="author" class="form-control">
+          </p>
+          <p>
+            <input ng-model="newPost.image" placeholder="image url" class="form-control">
+          </p>
+          <p>
+            <input ng-model="newPost.description" placeholder="description" class="form-control">
           </p>
           <p>
             <input ng-disabled="newPost.title.trim() === '' || newPost.author.trim() === ''" type="submit" class="btn btn-primary">
@@ -55,12 +60,12 @@
     </div>
 
     <div class="container">
-      {{ hello }}
-      {{ 1 + 2 }}
       <div ng-view></div>
     </div>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/posts_controller.js"></script>
+    <script type="text/javascript" src="javascripts/services/posts_service.js"></script>
   </body>
 </html>

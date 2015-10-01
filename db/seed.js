@@ -11,7 +11,7 @@ Post.remove({})
       author: "Jeff Dean",
       image: "http://www.planwallpaper.com/static/images/image5_170127819.jpg",
       description: "guy fising in tux",
-      create_at: new Date
+      created_at: new Date
     }),
 
     Post.insert({
@@ -19,7 +19,7 @@ Post.remove({})
       author: "Jeff Dean",
       image: "http://www.planwallpaper.com/static/images/image5_170127819.jpg",
       description: "guy fising in tux",
-      create_at: new Date
+      created_at: new Date
     }),
 
     Post.insert({
@@ -27,7 +27,7 @@ Post.remove({})
       author: "Jeff Dean",
       image: "http://www.planwallpaper.com/static/images/image5_170127819.jpg",
       description: "guy fising in tux",
-      create_at: new Date
+      created_at: new Date
     }),
   ])
 
