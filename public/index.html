@@ -1,71 +1,22 @@
 <!DOCTYPE html>
-<html ng-app="posts-workshop">
+<html ng-app>
   <head>
     <meta charset="utf-8">
-    <title>Posts Workshop</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" src="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" src="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
   </head>
-  <body ng-controller="PostsController">
-    <div>
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Post</a>
-          </div>
+  <body>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href ng-click="showForm()">Add Post</a>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+    <p>
+      test
+      <br>
+      {{1 + 1}}
+    </p>
 
-      <div class="container">
-        <form ng-show="show">
-          <p>
-            <input ng-model="newPost.title" placeholder="title" class="form-control">
-          </p>
-          <p>
-            <input ng-model="newPost.author" placeholder="author" class="form-control">
-          </p>
-          <p>
-            <input ng-model="newPost.image" placeholder="image url" class="form-control">
-          </p>
-          <p>
-            <input ng-model="newPost.description" placeholder="description" class="form-control">
-          </p>
-          <p>
-            <input ng-disabled="newPost.title.trim() === '' || newPost.author.trim() === ''" type="submit" class="btn btn-primary">
-          </p>
-        </form>
-      </div>
-    </div>
-
-    <div class="container">
-      <div ng-view></div>
-    </div>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="javascripts/controllers/posts_controller.js"></script>
-    <script type="text/javascript" src="javascripts/services/posts_service.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
